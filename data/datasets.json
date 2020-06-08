@@ -1,0 +1,6 @@
+{
+  "datasets": [
+    "platynereis"
+  ],
+  "defaultDataset": "platynereis"
+}

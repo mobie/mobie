@@ -30,6 +30,7 @@
       <ServiceEndpoint>https://s3.embl.de</ServiceEndpoint>
       <BucketName>platybrowser</BucketName>
       <SigningRegion>us-west-2</SigningRegion>
+      <Authentication>Anonymous</Authentication>
     </ImageLoader>
   </SequenceDescription>
   <ViewRegistrations>

@@ -1,43 +1,51 @@
 {
   "prospr-6dpf-1-whole-olig": {
-    "Color": "Magenta",
-    "MaxValue": 1000,
-    "MinValue": 0,
-    "Storage": {
+    "color": "magenta",
+    "contrastLimits": [
+      0.0,
+      1000.0
+    ],
+    "storage": {
       "local": "local/prospr-6dpf-1-whole-olig.xml",
       "remote": "remote/prospr-6dpf-1-whole-olig.xml"
     },
-    "Type": "Image"
+    "type": "image"
   },
   "sbem-6dpf-1-whole-raw": {
-    "Color": "White",
-    "MaxValue": 255,
-    "MinValue": 0,
-    "Storage": {
+    "color": "white",
+    "contrastLimits": [
+      0.0,
+      255.0
+    ],
+    "storage": {
       "local": "local/sbem-6dpf-1-whole-raw.xml",
       "remote": "remote/sbem-6dpf-1-whole-raw.xml"
     },
-    "Type": "Image"
+    "type": "image"
   },
   "sbem-6dpf-1-whole-segmented-inside": {
-    "Color": "White",
-    "MaxValue": 1,
-    "MinValue": 0,
-    "Storage": {
+    "color": "white",
+    "contrastLimits": [
+      0.0,
+      1.0
+    ],
+    "storage": {
       "local": "local/sbem-6dpf-1-whole-segmented-inside.xml",
       "remote": "remote/sbem-6dpf-1-whole-segmented-inside.xml"
     },
-    "Type": "Mask"
+    "type": "mask"
   },
   "sbem-6dpf-1-whole-segmented-nuclei": {
-    "ColorMap": "Glasbey",
-    "MaxValue": 1000,
-    "MinValue": 0,
-    "Storage": {
+    "color": "glasbey",
+    "contrastLimits": [
+      0.0,
+      1000.0
+    ],
+    "storage": {
       "local": "local/sbem-6dpf-1-whole-segmented-nuclei.xml",
       "remote": "remote/sbem-6dpf-1-whole-segmented-nuclei.xml"
     },
-    "TableFolder": "tables/sbem-6dpf-1-whole-segmented-nuclei",
-    "Type": "Segmentation"
+    "tableFolder": "tables/sbem-6dpf-1-whole-segmented-nuclei",
+    "type": "segmentation"
   }
 }
