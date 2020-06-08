@@ -20,54 +20,58 @@ For now, we provide two software tools to explore and generate MoBIE projects:
 To be accessible via MoBIE tools, your data needs to be organized as a **project**.
 One project can contain several **datasets**.
 
-See the folder `data` in this repository for an example project. It uses a small subset of [the data from the PlatyBrowser](https://github.com/mobie-org/platybrowser-datasets/tree/master/data).
+See the folder `/data` in this repository for an example project. It uses a small subset of [the data from the PlatyBrowser](https://github.com/mobie-org/platybrowser-datasets/tree/master/data).
 
 ### Project layout
+
+```
++datasets.json
++dataset1/
++dataset2/
+```
 
 
 ### Dataset layout
 
 The folder for a given version follows this structure:
 ```
-+images
++images/
 |  +--images.json
-|  +--local
-|  +--remote
-+misc
+|  +--local/
+|  +--remote/
++misc/
 |  +--bookmarks
-+tables
++tables/
 +README.txt
 ```
 
-- [images/images.json](https://github.com/platybrowser/pymmb#imagesjson): json which lists the avaialable image data and associated display options
-- [images/local](https://github.com/platybrowser/pymmb#supported-data-formats): metadata for image data stored locally, in bdv.xml data format
-- [images/remote](https://github.com/platybrowser/pymmb#supported-data-formats): metadata for image data stored remotely in a s3 compatible cloud store, in bdv.xml data format
-- misc: miscellaneous data, including [bookmarks](https://github.com/platybrowser/pymmb#bookmarksjson)
-- [tables](https://github.com/platybrowser/pymmb#supported-data-formats): tabular data associated with image data that has object ids, e.g. segmentations
+- [images/images.json](): json which lists the avaialable image data and associated display options
+- [images/local](): metadata for image data stored locally, in bdv.xml data format
+- [images/remote](): metadata for image data stored remotely in a s3 compatible cloud store, in bdv.xml data format
+- [misc](): miscellaneous data
+- [misc/bookmarks](): bookmarks
+- [tables](): tables for image data with associated objects, e.g. segmentations
 - README.txt: description of this version (optional)
 
-#### images.json
+#### images
 
-TODO describe images.json
+TODO describe images.json and image format
 
+MoBIE uses the [BigDataViewer](https://imagej.net/BigDataViewer) file format to represent image data, either stored locally or on a s3 object store. This includes 3 data formats:
+- [bdv.hdf5](https://imagej.net/BigDataViewer#About_the_BigDataViewer_data_format) for local data
+- [bdv.n5](https://github.com/bigdataviewer/bigdataviewer-core/blob/master/BDV%20N5%20format.md) for local data
+- [bdv.n5.s3](https://github.com/saalfeldlab/n5-aws-s3) for data stored on a s3 compatible object store. Note that this is not part of the official bdv spec yet, [we are working towards merging it](https://github.com/bigdataviewer/bigdataviewer-core/pull/94)
 
-#### bookmarks.json
+#### misc/bookmarks
 
 TODO describe bookmark format
 
+#### tables
 
-### Data formats
-
-The MMB uses [BigDataViewer](https://imagej.net/BigDataViewer) to browse volumetric image data stored locally or on a s3 compatible cloud object store.
-Hence the data must be provided in one of these three formats:
-- [bdv.hdf5](https://imagej.net/BigDataViewer#About_the_BigDataViewer_data_format) for local data
-- [bdv.n5](https://github.com/bigdataviewer/bigdataviewer-core/blob/master/BDV%20N5%20format.md) for local data
-- [bdv.n5.s3](https://github.com/saalfeldlab/n5-aws-s3) for data stored on a s3 compatible object store. Note that this is not part of the official bdv spec yet, [we are working towards merging it](https://github.com/bigdataviewer/bigdataviewer-core/issues/80)
-
+TODO describe table format
 Tables are stored as `tab separated values` and can be read from the filesystem or a githost.
 For each image with associated tables, the tables are stored in `tables/<IMAGE-NAME>/`.
 This folder must contain a table called `default.csv`, it can contain additional tables listed in a file `additional_tables.txt`. All tables must contain the column `label_id` linking its rows to objects in the image.
-
 
 
 ## Contributors
@@ -75,4 +79,4 @@ This folder must contain a table called `default.csv`, it can contain additional
 
 ## Citation
 
-If you use the MMB for your research, please cite [Whole-body integration of gene expression and single-cell morphology](https://www.biorxiv.org/content/10.1101/2020.02.26.961037v1).
+If you use MoBIE for your research, please cite [Whole-body integration of gene expression and single-cell morphology](https://www.biorxiv.org/content/10.1101/2020.02.26.961037v1).
