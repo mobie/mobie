@@ -45,14 +45,14 @@ A dataset folder is structured as follows:
 +README.txt
 ```
 
-where
-- [images/images.json]() lists the avaialable image data and stores their display options
-- [images/local]() contains the metadata for image data stored locally, in bdv.xml data format
-- [images/remote]() contains the metadata for image data stored remotely (s3 compatible cloud store) in bdv.xml data format
-- [misc]() contains miscellaneous data
-- [misc/bookmarks]() contains the bookmarks, stored as json files
-- [tables]() contains tabular data associated with image segmentation data
-- [README.txt]() gives a description of this dataset (optional)
+with the following elements:
+- [images/images.json](https://github.com/mobie-org/mobie/blob/master/data/platynereis/images/images.json) lists the avaialable image data and stores their display options
+- [images/local](https://github.com/mobie-org/mobie/tree/master/data/platynereis/images/local) contains the metadata for image data stored locally, in bdv.xml data format
+- [images/remote](https://github.com/mobie-org/mobie/tree/master/data/platynereis/images/remote) contains the metadata for image data stored remotely (s3 compatible cloud store) in bdv.xml data format
+- [misc](https://github.com/mobie-org/mobie/tree/master/data/platynereis/misc) contains miscellaneous data
+- [misc/bookmarks](https://github.com/mobie-org/mobie/tree/master/data/platynereis/misc/bookmarks) contains the bookmarks, stored as json files
+- [tables](https://github.com/mobie-org/mobie/tree/master/data/platynereis/tables) contains tabular data associated with image segmentation data
+- [README.txt](https://github.com/mobie-org/mobie/blob/master/data/platynereis/README.txt) gives a description of this dataset (optional)
 
 #### images
 
