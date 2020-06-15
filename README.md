@@ -3,7 +3,6 @@
 MultiModal Big Image Data Sharing and Exploration
 
 MoBIE is a framework for sharing and exploring large multi-modal image datasets.
-
 Example projects:
 - A cellular atlas for *Platynereis dumerilii*, the [PlatyBrowser](https://github.com/mobie-org/platybrowser-datasets)
 
@@ -24,16 +23,17 @@ See the folder `/data` in this repository for an example project. It uses a smal
 
 ### Project layout
 
+A project consists of a root folder with the file `datasets.json` that lists the available datasets and the datasets, each stored
+in a separate subfolder.
 ```
 +datasets.json
 +dataset1/
 +dataset2/
 ```
 
-
 ### Dataset layout
 
-The folder for a given version follows this structure:
+A dataset folder is structured as follows:
 ```
 +images/
 |  +--images.json
@@ -45,38 +45,60 @@ The folder for a given version follows this structure:
 +README.txt
 ```
 
-- [images/images.json](): json which lists the avaialable image data and associated display options
-- [images/local](): metadata for image data stored locally, in bdv.xml data format
-- [images/remote](): metadata for image data stored remotely in a s3 compatible cloud store, in bdv.xml data format
-- [misc](): miscellaneous data
-- [misc/bookmarks](): bookmarks
-- [tables](): tables for image data with associated objects, e.g. segmentations
-- README.txt: description of this version (optional)
+where
+- [images/images.json]() lists the avaialable image data and stores their display options
+- [images/local]() contains the metadata for image data stored locally, in bdv.xml data format
+- [images/remote]() contains the metadata for image data stored remotely (s3 compatible cloud store) in bdv.xml data format
+- [misc]() contains miscellaneous data
+- [misc/bookmarks]() contains the bookmarks, stored as json files
+- [tables]() contains tabular data associated with image segmentation data
+- [README.txt]() gives a description of this dataset (optional)
 
 #### images
 
-TODO describe images.json and image format
-
-MoBIE uses the [BigDataViewer](https://imagej.net/BigDataViewer) file format to represent image data, either stored locally or on a s3 object store. This includes 3 data formats:
-- [bdv.hdf5](https://imagej.net/BigDataViewer#About_the_BigDataViewer_data_format) for local data
+MoBIE uses the [BigDataViewer](https://imagej.net/BigDataViewer) file format to represent image data, either stored locally or on a s3 object store:
 - [bdv.n5](https://github.com/bigdataviewer/bigdataviewer-core/blob/master/BDV%20N5%20format.md) for local data
 - [bdv.n5.s3](https://github.com/saalfeldlab/n5-aws-s3) for data stored on a s3 compatible object store. Note that this is not part of the official bdv spec yet, [we are working towards merging it](https://github.com/bigdataviewer/bigdataviewer-core/pull/94)
 
+The file `images.json` lists all image data that is available for a dataset.
+Currently, we support three different types of image data:
+- image: greyscale image data
+- segmentation: segmentaiton image data, where each segment is assigned a unique id; supports tables
+- mask: binary mask
+
+<!---
+TODO explain the image.json format in more detail
+-->
+
 #### misc/bookmarks
 
-TODO describe bookmark format
+The bookmark folder must contain a file `default.json` that gives the bookmark for the initial view when opening the dataset.
+It may contain additional bookmarks stored as json.
+
+<!---
+TODO explain the bookmark format further
+-->
 
 #### tables
 
-TODO describe table format
-Tables are stored as `tab separated values` and can be read from the filesystem or a githost.
-For each image with associated tables, the tables are stored in `tables/<IMAGE-NAME>/`.
-This folder must contain a table called `default.csv`, it can contain additional tables listed in a file `additional_tables.txt`. All tables must contain the column `label_id` linking its rows to objects in the image.
+Tables are stored as `tab separated values` and can be read from the filesystem or git.
+For each segmentation with associated tables, the tables are stored in `tables/<IMAGE-NAME>/`.
+This folder must contain a table called `default.csv`, it can contain additional tables.
+All tables must contain the column `label_id` linking its rows to objects in the segmentation.
 
 
-## Contributors
+## Contributors & Citation
 
+MoBIE is primarily deveopled by Christian Tischer (@tischi) and Constantin Pape (@constantinpape).
+It has been initially developed for the [PlatyBrowser](https://github.com/mobie-org/platybrowser-datasets) but has since grown in scope. 
+In addition, Kimberly Meechan (@K-Meech), Hernando Martinez Vergara (@HernandoMV), Martin Schorb (@martinschorb) and Valentyna Zinchenko (@vzinche) have contributed to the development.
 
-## Citation
+<!---
+TODO additional acknknowledgments:
+- Sian for name
+- Gemma for logo
+- Tobias, Igor, Stephan for java help
+- ?
+-->
 
 If you use MoBIE for your research, please cite [Whole-body integration of gene expression and single-cell morphology](https://www.biorxiv.org/content/10.1101/2020.02.26.961037v1).
