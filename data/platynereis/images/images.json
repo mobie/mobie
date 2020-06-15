@@ -1,0 +1,51 @@
+{
+  "prospr-6dpf-1-whole-olig": {
+    "color": "magenta",
+    "contrastLimits": [
+      0.0,
+      1000.0
+    ],
+    "storage": {
+      "local": "local/prospr-6dpf-1-whole-olig.xml",
+      "remote": "remote/prospr-6dpf-1-whole-olig.xml"
+    },
+    "type": "image"
+  },
+  "sbem-6dpf-1-whole-raw": {
+    "color": "white",
+    "contrastLimits": [
+      0.0,
+      255.0
+    ],
+    "storage": {
+      "local": "local/sbem-6dpf-1-whole-raw.xml",
+      "remote": "remote/sbem-6dpf-1-whole-raw.xml"
+    },
+    "type": "image"
+  },
+  "sbem-6dpf-1-whole-segmented-inside": {
+    "color": "white",
+    "contrastLimits": [
+      0.0,
+      1.0
+    ],
+    "storage": {
+      "local": "local/sbem-6dpf-1-whole-segmented-inside.xml",
+      "remote": "remote/sbem-6dpf-1-whole-segmented-inside.xml"
+    },
+    "type": "mask"
+  },
+  "sbem-6dpf-1-whole-segmented-nuclei": {
+    "color": "glasbey",
+    "contrastLimits": [
+      0.0,
+      1000.0
+    ],
+    "storage": {
+      "local": "local/sbem-6dpf-1-whole-segmented-nuclei.xml",
+      "remote": "remote/sbem-6dpf-1-whole-segmented-nuclei.xml"
+    },
+    "tableFolder": "tables/sbem-6dpf-1-whole-segmented-nuclei",
+    "type": "segmentation"
+  }
+}
