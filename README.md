@@ -10,11 +10,12 @@ Example projects:
 
 - [Object browsing and attribute colouring](https://youtu.be/HENo-vq-6to)
 - [Exploring gene expression in Platynereis atlas](https://youtu.be/4SR5GoSiCVE)
+- [Visualising gene expression and chromatin segmentation in Platynereis atlas](https://youtu.be/tdOLelm6Vlw)
 
 ## MoBIE software
 
 For now, we provide two software tools to explore and generate MoBIE projects:
-- [mobie-viewer-fiji](https://github.com/mobie-org/mobie-viewer-fiji) is a Fiji plugin to explore MoBIE projects from local or remote sources.
+- [mobie-viewer-fiji](https://github.com/mobie-org/mobie-viewer-fiji) is a [BigDataViewer](https://imagej.net/BigDataViewer) based [Fiji](https://fiji.sc/) plugin to explore MoBIE projects from local or remote sources.
 - [mobie-utils-python](https://github.com/mobie-org/mobie-utils-python) is a python library to generate data in the MoBIE data storage layout.
 
 
