@@ -9,6 +9,7 @@ Example projects:
 ## Examples
 
 - [Object browsing and attribute colouring](https://youtu.be/HENo-vq-6to)
+- [Exploring gene expression in Platynereis atlas](https://youtu.be/4SR5GoSiCVE)
 
 ## MoBIE software
 
