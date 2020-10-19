@@ -1,3 +1,6 @@
+<img width="300" src="images/mobie-logo-highres.png"></img>
+
+
 # MoBIE
 
 MultiModal Big Image Data Sharing and Exploration
