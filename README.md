@@ -9,7 +9,7 @@ MoBIE is a framework for sharing and exploring large multi-modal image datasets.
 Example projects:
 - A cellular atlas for *Platynereis dumerilii*, the [PlatyBrowser](https://github.com/mobie-org/platybrowser-datasets)
 
-## Examples
+## Examples videos
 
 - [Object browsing and attribute colouring](https://youtu.be/HENo-vq-6to)
 - [Exploring gene expression in Platynereis atlas](https://youtu.be/4SR5GoSiCVE)
