@@ -22,6 +22,10 @@ For now, we provide two software tools to explore and generate MoBIE projects:
 - [mobie-utils-python](https://github.com/mobie-org/mobie-utils-python) is a python library to generate data in the MoBIE data storage layout.
 
 
+## Tutorials
+Tutorials for using MoBIE are available at [http://mobie.github.io/](http://mobie.github.io/), and
+installation instructions [here](https://github.com/mobie/mobie-viewer-fiji)
+
 ## Data storage
 
 To be accessible via MoBIE tools, your data needs to be organized as a **project**.
