@@ -101,9 +101,9 @@ All tables must contain the column `label_id` linking its rows to objects in the
 
 ## Contributors & Citation
 
-MoBIE is primarily deveopled by Christian Tischer (@tischi) and Constantin Pape (@constantinpape).
+MoBIE is primarily deveopled by Christian Tischer (@tischi), Kimberly Meechan (@K-Meech) and Constantin Pape (@constantinpape).
 It has been initially developed for the [PlatyBrowser](https://github.com/mobie-org/platybrowser-datasets) but has since grown in scope. 
-In addition, Kimberly Meechan (@K-Meech), Hernando Martinez Vergara (@HernandoMV), Martin Schorb (@martinschorb) and Valentyna Zinchenko (@vzinche) have contributed to the development.
+In addition, Hernando Martinez Vergara (@HernandoMV), Martin Schorb (@martinschorb) and Valentyna Zinchenko (@vzinche) have contributed to the development.
 
 <!---
 TODO additional acknknowledgments:
