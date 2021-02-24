@@ -8,6 +8,7 @@ MultiModal Big Image Data Sharing and Exploration
 MoBIE is a framework for sharing and exploring large multi-modal image datasets.
 Example projects:
 - A cellular atlas for *Platynereis dumerilii*, the [PlatyBrowser](https://github.com/mobie-org/platybrowser-datasets)
+- Morphogical changes in SARS-CoV2 infected cells in [EM Tomograms](https://github.com/mobie/covid-tomo-datasets) and [Volume EM](https://github.com/mobie/covid-em-datasets).
 
 ## Examples videos
 
