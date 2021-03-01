@@ -12,6 +12,7 @@ Example projects:
 
 ## Examples videos
 
+- [NEUBIAS Academy MoBIE Presentation](https://youtu.be/CZpaTCuSQao?t=2843)
 - [Object browsing and attribute colouring](https://youtu.be/HENo-vq-6to)
 - [Exploring gene expression in Platynereis atlas](https://youtu.be/4SR5GoSiCVE)
 - [Visualising gene expression and chromatin segmentation in Platynereis atlas](https://youtu.be/tdOLelm6Vlw)
